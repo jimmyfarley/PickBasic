@@ -12,7 +12,7 @@ export class Team extends Component {
               dapibus leonec.
             </p>
           </div>
-          <div id="row">
+          <div className="row">
             {this.props.data
               ? this.props.data.map((d, i) => (
                   <div  key={`${d.name}-${i}`} className="col-md-3 col-sm-6 team">
