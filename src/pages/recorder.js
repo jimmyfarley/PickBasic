@@ -44,6 +44,8 @@ export default function CanvasRecorder(canvas, video_bits_per_sec) {
       if (MediaRecorder.isTypeSupported(types[i])) {
         supportedType = types[i];
         break;
+      } else {
+        console.info('Record Type Not Supported:', types[i])
       }
     }
     if (supportedType == null) {

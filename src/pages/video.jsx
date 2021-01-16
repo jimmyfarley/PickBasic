@@ -23,7 +23,7 @@ export default () => {
         ctx.font = '24px Verdana';
         // Create gradient
         var gradient = ctx.createLinearGradient(0, 0, 400, 0);
-        gradient.addColorStop('0', ' magenta');
+        gradient.addColorStop('0', 'magenta');
         gradient.addColorStop('0.5', 'blue');
         gradient.addColorStop('1.0', 'red');
         // Fill with gradient
