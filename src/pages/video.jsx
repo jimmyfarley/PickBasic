@@ -55,7 +55,7 @@ export default () => {
       if (recorder) {
         recorder.stop();
         // Save with given file name
-        recorder.save(Date.now() + '.webm');
+        recorder.save();
       }
     } else {
       // 2.5 Mbps
