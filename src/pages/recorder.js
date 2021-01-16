@@ -4,9 +4,9 @@ const types = [
   'video/webm',
   'video/webm,codecs=vp9',
   'video/vp8',
-  'video/webm\;codecs=vp8',
-  'video/webm\;codecs=daala',
-  'video/webm\;codecs=h264',
+  'video/webm;codecs=vp8',
+  'video/webm;codecs=daala',
+  'video/webm;codecs=h264',
 ];
 
 const exts = {
@@ -15,9 +15,9 @@ const exts = {
     'video/webm': '.webm',
     'video/webm,codecs=vp9': '.webm',
     'video/vp8': '.webmp',
-    'video/webm\;codecs=vp8': '.webm',
-    'video/webm\;codecs=daala': '.webm',
-    'video/webm\;codecs=h264': '.webm',
+    'video/webm;codecs=vp8': '.webm',
+    'video/webm;codecs=daala': '.webm',
+    'video/webm;codecs=h264': '.webm',
 }
 
 export default function CanvasRecorder(canvas, video_bits_per_sec) {
