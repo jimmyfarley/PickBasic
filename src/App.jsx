@@ -5,8 +5,8 @@ import {
   Route,
   Link
 } from 'react-router-dom';
-
 import 'bootstrap/dist/css/bootstrap.css';
+
 import Home from './Home'
 import Video from './pages/video'
 
