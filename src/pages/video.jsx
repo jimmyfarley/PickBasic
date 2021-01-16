@@ -42,6 +42,10 @@ export default () => {
   }, [])
 
   const toggleRecord = () => {
+    if (!isRecording) {
+      const video = document.getElementById('subtitle')
+      video.play()
+    }
     setRecording(!isRecording)
   }
 
