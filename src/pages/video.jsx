@@ -50,7 +50,7 @@ export default () => {
 
 
     if (isRecording) {
-      video.onpause()
+      video.pause()
 
       if (recorder) {
         recorder.stop();
