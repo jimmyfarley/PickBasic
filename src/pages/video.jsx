@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react'
+import Recorder from './recorder'
 import './video.css'
+
+let recorder
 
 export default () => {
   const [subtitle, setSubtitle] = useState('Please enter the subtitle here')
@@ -42,10 +45,25 @@ export default () => {
   }, [])
 
   const toggleRecord = () => {
-    if (!isRecording) {
-      const video = document.getElementById('video')
+    const video = document.getElementById('video')
+    const canvas = document.getElementById('canvas')
+
+
+    if (isRecording) {
+      video.onpause()
+
+      if (recorder) {
+        recorder.stop();
+        // Save with given file name
+        recorder.save(Date.now() + '.webm');
+      }
+    } else {
+      // 2.5 Mbps
+      recorder = new Recorder(canvas, 4500000);
+      recorder.start()
       video.play()
     }
+  
     setRecording(!isRecording)
   }
 
